@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Customer Details</legend>
+            <div><label for="">
+                    First Name
+                    <input type="text" placeholder="George" autofocus>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Last Name
+                    <input type="text" placeholder="Devis">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Male
+                    <input type="radio" name="gender">
+                </label>
+                <label>
+                    Female
+                    <input type="radio" name="gender">
+                </label>
+                <label>
+                    Other
+                    <input type="radio" name="gender">
+                </label>
+            </div>
+            <div>
+                Preferred contact method:
+                <label>
+                    Email
+                    <input type="radio" name="contact">
+                </label>
+                <label>
+                    Phone
+                    <input type="radio" name="contact">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Email
+                    <input type="email" placeholder="your@email.com">
+                </label>
+            </div>
+            <label for="">
+                Phone
+                <input type="text" placeholder="+359885236225">
+            </label>
+            <div>
+                <label for="">
+                    Town
+                    <select>
+                        <option value="varna">Varna</option>
+                        <option value="sofia">Sofia</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Age
+                    <input type="number" min="18" max="70">
+                </label>
+            </div>
+            <div>
+                <label for="browser">Choose your browser from the list: </label>
+                <input list="browsers" name="browser" id="browser">
+                <datalist id="browsers">
+                    <option value="Edge">Edge</option>
+                    <option value="Firefox">Firefox</option>
+                    <option value="Chrome">Chrome</option>
+                </datalist>
+            </div>
+            <div>
+                <label>
+                    <textarea rows="5" col="20" placeholder="More information..."></textarea>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox"></input>
+                    I Agree the Terms adn Conditions
+                </label>
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
