@@ -1,0 +1,54 @@
+body {
+    font-family: 'Pacifico', cursive;
+}
+
+p {
+    color: blue;
+    font-size: 24px;
+}
+h1 {
+    color: red;
+}
+.quoted-text {
+    font-style: italic;
+    font-size: 18px;
+    color: gray;
+}
+#special-quoted-text {
+color: pink;
+} 
+
+span {
+color: black;
+}
+
+.slogan {
+    font-weight: bold;
+    display: block;
+}
+
+.navigation {
+    list-style: none;
+}
+
+.navigation li {
+    display: inline;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    background-color: red;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid red;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+    color: red;
+    transform: scale(1.3);
+}
