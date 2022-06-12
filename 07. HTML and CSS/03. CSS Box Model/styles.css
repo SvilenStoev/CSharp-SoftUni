@@ -1,0 +1,43 @@
+p,
+div {
+    padding: 5px;
+    background: lightgreen;
+}
+
+span,
+strong {
+    background: white;
+}
+
+span.test {
+    box-sizing: border-box;
+    width: 200px;
+
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    color:blueviolet;
+
+    /* shared */
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #0053ff;
+
+    /* top */
+    border-top-right-radius: 30px;
+    border-top-color: lightcoral;
+    border-top-style: hidden;
+
+    /* bottom */
+    border-bottom-style: dotted;
+
+    /* left */
+    border-left-color: lightcoral;
+    border-left-style: dashed;
+
+    /* right */
+    border-right-color: lightgreen;
+
+}
