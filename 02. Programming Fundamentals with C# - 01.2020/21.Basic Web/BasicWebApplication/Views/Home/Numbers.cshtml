@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = ViewBag.Title;
+
+    int sum(int a, int b)
+    {
+        return a + b;
+    }
+}
+
+<div class="text-center">
+    <h1 class="display-4">Числа от 1 до 10</h1>
+    <p>@ViewBag.Nums</p>
+    <p>Числото + 10: @sum(ViewBag.Nums, 10)</p>
+</div>
