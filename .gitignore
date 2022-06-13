@@ -232,6 +232,7 @@ ClientBin/
 *.jpeg
 *.gif
 *.pdf
+*.zip
 orleans.codegen.cs
 
 # Including strong name files can present a security risk
