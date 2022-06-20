@@ -1,0 +1,45 @@
+h2 {
+    font-family: Georgia, serif;
+    margin: 12px 0px;
+    size: 1em;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+    position: relative;
+    height: 900px;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+}
+
+section div.secDiv {
+    padding: 10px 25px;
+    position: relative;
+    min-height: 160px;
+}
+
+img {
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.btn {
+    background-color: rgb(0, 153, 0);
+    position: absolute;
+    right: 26px;
+    bottom: 26px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 12px;
+
+}

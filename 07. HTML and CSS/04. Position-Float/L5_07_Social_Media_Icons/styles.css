@@ -1,0 +1,42 @@
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
+
+body {
+    margin: 50px 50px;
+}
+
+ul li {
+    display: inline-block;
+    margin: 8px;
+}
+
+a {
+    border-radius: 50%;
+    padding: 15px;
+    color: black;
+    background-color: #EEEEEE;
+}
+
+.fb:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.insta:hover {
+    cursor: pointer;
+    color: lightblue;
+}
+
+.gmail:hover {
+    cursor: pointer;
+    color: red;
+}
+
+.linkedin:hover {
+    cursor: pointer;
+    color: lightcyan;
+}
+
+.youtube:hover {
+    cursor: pointer;
+    color: lightgrey;
+}

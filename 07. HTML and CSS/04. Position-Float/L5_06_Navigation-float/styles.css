@@ -3,32 +3,37 @@ body {
     font-family: Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #EEEEEE;
+    background-color: rgb(238, 238, 238);
+
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: Georgia, serif;
     font-weight: normal;
+}
+
+header {
+    border-bottom: 2px solid black;
 }
 
 p.site-title {
     margin: 0;
     display: inline-block;
-    width: 100%;
-    padding: 0 0 20px;
+    padding: 0 0 10px;
     font-size: 38px;
     text-transform: uppercase;
     font-weight: bold;
-    border-bottom: 2px solid black;
 }
 
 img {
     width: 25%;
     max-width: 140px;
     padding: 4px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border: 3px solid black;
+    box-shadow: 2px 3px 6px 2px rgba(0, 0, 0, 0.25);
 }
 
 img.floatRight {
@@ -37,6 +42,7 @@ img.floatRight {
 }
 
 blockquote {
+    font-family: Georgia, serif;
     padding: 0 0 0 12px;
     font-style: italic;
     color: gray;
@@ -56,4 +62,40 @@ blockquote {
 
 .blockquouteP {
     margin: 0;
+}
+
+main,
+aside {
+    display: inline-block;
+}
+
+main {
+    width: 70%;
+}
+
+aside {
+    margin-left: 5%;
+    width: 20%;
+    vertical-align: top;
+}
+
+ul {
+    margin: 5px 0px;
+}
+
+li a {
+    text-decoration: none;
+    color: #729D6A;
+}
+
+nav.firstNav {
+    display: inline-block;
+    float: right;
+    margin: 10px 20px 0px 0px;
+}
+
+nav.firstNav ul li {
+    display: inline-block;
+    color: #55774A;
+    margin-left: 10px;
 }
