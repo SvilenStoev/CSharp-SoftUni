@@ -1,10 +1,17 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
 h2 {
     font-family: Georgia, serif;
     margin: 12px 0px;
-    size: 1em;
+    font-size: 1em;
+    line-height: 1.2px;
 }
 
 body {
+    margin: 0;
     background-color: rgb(238, 238, 238);
     position: relative;
     height: 900px;
@@ -17,13 +24,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    max-width: 400px;
 }
 
 section div.secDiv {
     padding: 10px 25px;
     position: relative;
-    min-height: 160px;
+    min-height: 150px;
 }
 
 img {
