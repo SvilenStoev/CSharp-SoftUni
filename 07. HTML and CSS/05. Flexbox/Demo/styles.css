@@ -1,0 +1,16 @@
+section {
+    margin: 10px;
+    padding: 15px;
+    background-color: aqua;
+    display: flex;
+}
+
+article {
+    background-color: blue;
+}
+
+p {
+    margin: 10px;
+    background-color: pink;
+
+}
