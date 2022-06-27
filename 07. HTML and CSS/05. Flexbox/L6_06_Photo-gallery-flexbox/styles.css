@@ -1,0 +1,32 @@
+html {
+    background-color: #EEEEEE;
+    padding: 150px 300px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+ul,
+li {
+    display: flex;
+}
+
+ul {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+li {
+    margin: 25px 15px;
+    padding: 35px 10px;
+    align-items: center;
+    border: 8px solid black;
+    box-shadow: 1px 1px 13px 1px black;
+    background-color: white;
+}
+
+img {
+    flex-basis: 100%;
+}

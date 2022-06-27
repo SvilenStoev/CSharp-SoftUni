@@ -1,0 +1,40 @@
+html {
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    margin: 30px 50px;
+}
+
+header {
+    border-bottom: 2px solid black;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin-left: 50px;
+}
+
+a {
+    color: #089D14;
+    text-decoration: none;
+}
+
+ul li {
+    margin: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav p {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+main h1 {
+    font-weight: lighter;
+}
