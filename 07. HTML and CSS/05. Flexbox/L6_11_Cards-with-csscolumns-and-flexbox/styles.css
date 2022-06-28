@@ -1,0 +1,68 @@
+body {
+    margin: 80px auto;
+    background-color: rgb(238, 238, 238);
+    font-family: Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Masonry */
+
+div.cards-layout {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.masonry section {
+    column-count: 3;
+}
+
+.masonry article.card {
+    display: inline-block;
+    vertical-align: top;
+    margin: 14px;
+    width: 91%;
+    min-width: 165px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 10px -3px black;
+    background-color: #FFFFFF;
+}
+
+img {
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+div.card-body, div.card-bottom {
+    padding: 14px 20px;
+}
+
+div.card-bottom {
+    border-top: 2px solid rgb(238, 238, 238);
+}
+
+div.card-body p, div.card-bottom p {
+    margin: 6px;
+}
+
+/* Flex */
+
+.flex-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 200vh;
+}
+
+.flex article.card {
+    vertical-align: top;
+    margin: 14px;
+    width: 32%;
+    min-width: 165px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 10px -3px black;
+    background-color: #FFFFFF;
+}
