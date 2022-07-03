@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@700&family=Roboto:ital,wght@1,300&display=swap');
+
+body {
+    margin: 60px 40px;
+    background-color: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+section.timeline {
+    border: 0.3rem solid rgb(153, 153, 153);
+    padding: 30px 80px;
+    max-width: 1040px;
+    max-height: 1200px;
+    height: 2000px;
+    background-color: white;
+    margin: 0px auto;
+}
+
+section.timeline-title {
+    text-align: center;
+    margin: 0px auto;
+    width: 300px;
+    font-size: 14px;
+    max-width: 350px;
+    border: 2px solid rgb(175 171 171);
+    border-radius: 6px;
+}
+
+.verticle-line::before {
+    content: '';
+    width: 5px;
+    height: 1135px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgb(153, 153, 153);
+    position: absolute;
+}
+
+section.timeline-title p {
+    margin: 4px 0px;
+    font-weight: 600;
+}
+
+h3.article-title {
+    font-style: italic;
+    font-family: 'Laila', sans-serif;
+    font-size: 20px;
+}
+
+.article-right {
+    position: relative;
+    width: 45%;
+    float: right;
+}
+
+.article-right::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -55px;
+    width: 25px;
+    height: 25px;
+    background-color: #048E03;
+    border: 3px solid rgb(153, 153, 153);
+    border-radius: 50%;
+}
+
+.article-left {
+    position: relative;
+    width: 45%;
+    float: left;
+}
+
+article.article-left:nth-child(4) {
+    margin-top: 135px;
+}
+
+article.article-right:nth-child(5) {
+    margin-top: 260px;
+    margin-bottom: 50px;
+}
+
+article.article-left:nth-child(6) {
+    margin-top: 130px;
+    margin-bottom: 80px;
+
+}
+
+article.article-right:nth-child(7) {
+    margin-top: 0px;
+    margin-bottom: 130px;
+}
+
+
+.article-left::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -57px;
+    width: 25px;
+    height: 25px;
+    background-color: #FF9A05;
+    border: 3px solid rgb(153, 153, 153);
+    border-radius: 50%;
+}
+
+.article-left {
+    text-align: right;
+}
