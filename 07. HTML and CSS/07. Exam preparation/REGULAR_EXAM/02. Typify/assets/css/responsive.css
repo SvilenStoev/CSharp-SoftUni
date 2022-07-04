@@ -1,0 +1,68 @@
+@media all and (max-width: 600px) {
+    .banner h2 {
+        width: 90%;
+        font-size: 1.8em;
+    }
+
+    ul.actions li:last-child {
+        width: 100%;
+    }
+
+    .banner .button.special {
+        width: 90%;
+    }
+
+    .banner {
+        padding: 3em 0 1em 0;
+    }
+
+    .wrapper {
+        padding: 2em 0 2em 0;
+    }
+
+    .wrapper > .inner {
+        width: 100%;
+    }
+
+    header.major {
+        margin-bottom: 0;
+    }
+
+    .features {
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .feature {
+        width: 100%;
+    }
+
+    .wrapper > .inner.narrow {
+        width: 100%;
+    }
+
+    .grid-form {
+        flex-direction: column;
+    }
+
+    .grid-form .form-control.narrow {
+        width: 100%;
+    }
+
+    .grid-form {
+        margin: 15px;
+    }
+
+    .wrapper.style2 input[type="submit"] {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 2em 0 1em 0;
+    }
+
+    .footer:before {
+        width: 90%;
+        left: 5%;
+    }
+}

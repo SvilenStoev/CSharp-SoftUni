@@ -63,7 +63,7 @@ h3.article-title {
     content: '';
     position: absolute;
     top: 20px;
-    left: -55px;
+    left: -14.5%;
     width: 25px;
     height: 25px;
     background-color: #048E03;
@@ -75,6 +75,7 @@ h3.article-title {
     position: relative;
     width: 45%;
     float: left;
+    text-align: right;
 }
 
 article.article-left:nth-child(4) {
@@ -97,12 +98,11 @@ article.article-right:nth-child(7) {
     margin-bottom: 130px;
 }
 
-
 .article-left::after {
     content: '';
     position: absolute;
     top: 20px;
-    right: -57px;
+    right: -14.5%;
     width: 25px;
     height: 25px;
     background-color: #FF9A05;
@@ -110,6 +110,86 @@ article.article-right:nth-child(7) {
     border-radius: 50%;
 }
 
-.article-left {
-    text-align: right;
+@media all and (max-width: 900px) {
+    .article-left::after {
+        right: -16%;
+    }
+
+    .article-right::after {
+        left: -16%;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .article-left::after {
+        right: -17%;
+    }
+
+    .article-right::after {
+        left: -17%
+    }
+}
+
+
+@media all and (max-width: 600px) {
+    section.timeline {
+        padding: 20px 50px;
+        max-height: 1500px;
+        height: 2000px;
+    }
+
+    section.timeline-title {
+        margin: 0px;
+    }
+
+    .verticle-line::before {
+        height: 1445px;
+        left: 20%;
+    }
+
+    section.timeline-title p {
+        margin: 4px 0px;
+    }
+
+    article.article-left:nth-child(4),
+    article.article-right:nth-child(5),
+    article.article-left:nth-child(6),
+    article.article-right:nth-child(7) {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+
+    article.article-right,
+    article.article-left {
+        display: block;
+        width: 85%;
+        margin-left: 14%;
+        float: none;
+        text-align: left;
+    }
+
+    .article-right::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: -50px;
+        width: 25px;
+        height: 25px;
+        background-color: #048E03;
+        border: 3px solid rgb(153, 153, 153);
+        border-radius: 50%;
+    }
+
+    .article-left::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: -50px;
+        width: 25px;
+        height: 25px;
+        background-color: #FF9A05;
+        border: 3px solid rgb(153, 153, 153);
+        border-radius: 50%;
+    }
 }
