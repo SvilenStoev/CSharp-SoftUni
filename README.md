@@ -77,6 +77,12 @@
 ### Content:
 01. ADO.NET
 02. ORM Fundamentals
+03. EF Core Introduction
+04. Entity Relations
+05. LINQ
+06. Advanced Querying
+07. Exam Preparation
+08. Exam - 04.04.2021
 
 ## HTML and CSS
 ### Content:
