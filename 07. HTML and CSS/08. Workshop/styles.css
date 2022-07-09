@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Lato&family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@500&family=Roboto:wght@400;500&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 80px 10px 80px;
+    box-shadow: 1px 1px 9px -5px black;
+    background-color: white;
+}
+
+.header-nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.header-nav ul a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #54546D;
+    padding: 0px 10px;
+}
+
+.header-nav ul button {
+    color: white;
+    background-color: #9B5DC6;
+    border: none;
+    border-radius: 12px;
+    margin: 0;
+    padding: 6px 12px;
+}
+
+.certificates {
+    display: flex;
+    position: relative;
+    padding: 30px 80px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.certificates-img {
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.certificates-img::before {
+    content: '';
+    position: absolute;
+    background-color: #54546D;
+    width: 550px;
+    height: 550px;
+    right: -23px;
+    top: -275px;
+    z-index: -2;
+    border-radius: 50%;
+}
+
+.certificates-img::after {
+    background: url('./images/award.svg');
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    top: -47px;
+    right: -640px;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.certificates-content {
+    margin-right: 20px;
+}
+
+.certificates-title {
+    color: #54546D;
+}
+
+.certificates-italic-text {
+    font-style: italic;
+    color: #78788f;
+    margin: 4px 0px;
+    font-size: 13px;
+}
+
+.cpe {
+    display: flex;
+    position: relative;
+    padding: 60px 80px 0px 80px;
+    margin: 20px 0px;
+    background-color: #14162B;
+    color: white;
+}
+
+.cpe-content {
+    padding: 0px 30px 0px 0px;
+}
+
+.cpe-img img {
+    position: relative;
+    top: 24px;
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header-nav ul {
+        flex-direction: column;
+    }
+
+    .cariers {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .certificates {
+        flex-direction: column;
+    }
+
+    .certificates-img::after {
+        display: none;
+    }
+
+    .certificates-img::before {
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 800px) {
+    .cpe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cpe-img {
+        order: 1;
+
+    }
+
+    .cpe-content {
+        order: 2;
+    }
+
+    .cpe-img img {
+        top: 0px;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .footer {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 400px) {
+
+    .cpe,
+    .certificates,
+    .header {
+        padding: 20px;
+    }
+
+    .cpe-content {
+        margin-right: 0px;
+    }
+
+    .certificates-img {
+        width: 80%;
+    }
+
+    .certificates-img img {
+        width: 100%;
+    }
+
+    .cpe-img {
+        width: 80%;
+    }
+
+    .cpe-img img {
+        width: 100%;
+    }
+}
+
+.cariers {
+    display: flex;
+    padding: 30px 80px;
+    color: #54546D;
+}
+
+.cariers-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0px 20px 0px;
+    margin-left: 30px;
+}
+
+.cariers-content h2 {
+    margin: 0px;
+}
+
+.cariers-content a {
+    width: 200px;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #FFFFFF;
+    color: #995BC0;
+    border: 1px solid #995BC0;
+    border-radius: 18px;
+}
+
+.footer {
+    display: flex;
+    padding: 20px 120px 20px 80px;
+    justify-content: space-between;
+    color: white;
+    background-color: #2C2C3A;
+}
+
+.footer-nav-title {
+    color: #9A5DC5;
+    font-size: 18px; 
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.footer ul li {
+    margin: 8px 0px;
+}
