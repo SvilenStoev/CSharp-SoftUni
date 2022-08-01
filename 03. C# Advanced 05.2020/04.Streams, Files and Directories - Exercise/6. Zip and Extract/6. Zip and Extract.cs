@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO.Compression;
 
 namespace _6._Zip_and_Extract
 {
@@ -6,7 +7,11 @@ namespace _6._Zip_and_Extract
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //ZipFile.CreateFromDirectory("./", @"D:\Programming\SoftUni\3 - C# Advanced and C# OOP - 05.2020/myArchive.zip");
+            ZipFile.ExtractToDirectory(@"D:\Programming\SoftUni\3 - C# Advanced and C# OOP - 05.2020/myArchive.zip", @"D:\test");
+
+
+
         }
     }
 }

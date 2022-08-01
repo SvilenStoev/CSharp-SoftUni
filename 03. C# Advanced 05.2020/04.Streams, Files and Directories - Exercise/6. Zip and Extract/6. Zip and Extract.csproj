@@ -6,4 +6,10 @@
     <RootNamespace>_6._Zip_and_Extract</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="copyMe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

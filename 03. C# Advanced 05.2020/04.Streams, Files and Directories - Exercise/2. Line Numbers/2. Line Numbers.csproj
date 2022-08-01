@@ -6,4 +6,10 @@
     <RootNamespace>_2._Line_Numbers</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="text.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
