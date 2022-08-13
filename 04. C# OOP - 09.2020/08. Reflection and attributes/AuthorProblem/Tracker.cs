@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Reflection;
 using System.Linq;
 
@@ -22,7 +20,7 @@ namespace AuthorProblem
 
                     foreach (AuthorAttribute attribute in attributes)
                     {
-                        Console.WriteLine($"{method.Name} is wriiten by {attribute.Name}");
+                        Console.WriteLine($"{method.Name} is written by {attribute.Name}");
                     }
                 }
 

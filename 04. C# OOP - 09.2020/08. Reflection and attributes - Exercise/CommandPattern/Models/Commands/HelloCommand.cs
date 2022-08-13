@@ -1,8 +1,4 @@
 ﻿using CommandPattern.Core.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 
 namespace CommandPattern.Models.Commands
 {
@@ -10,7 +6,14 @@ namespace CommandPattern.Models.Commands
     {
         public string Execute(string[] args)
         {
-            return $"Hello, {args[0]}";
+            string result = "No arguments!";
+
+            if (args.Length != 0)
+            {
+                result = $"Hello, {args[0]}";
+            }
+
+            return result;
         }
     }
 }

@@ -17,9 +17,11 @@ namespace CommandPattern.Models.Commands
 
         public string Read(string args)
         {
-            string commandName = args.Split(" ", StringSplitOptions.RemoveEmptyEntries)[0] + COMMAND_POSTFIX;
+            string[] commandTokens = args.Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
-            string[] commandArgs = args.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray().Skip(1).ToArray();
+            string commandName = commandTokens[0] + COMMAND_POSTFIX;
+
+            string[] commandArgs = commandTokens.Skip(1).ToArray();
 
             Assembly assembly = Assembly.GetCallingAssembly();
             Type commandType = assembly.GetTypes().FirstOrDefault(t => t.Name.ToLower() == commandName.ToLower());

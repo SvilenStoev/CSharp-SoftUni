@@ -20,9 +20,16 @@ namespace CommandPattern.Core
             {
                 string command = Console.ReadLine();
 
-                string result = commandInterpreter.Read(command);
+                try
+                {
+                    string result = commandInterpreter.Read(command);
 
-                Console.WriteLine(result);
+                    Console.WriteLine(result);
+                }
+                catch (ArgumentException ae)
+                {
+                    Console.WriteLine(ae.Message);
+                }
             }
         }
     }

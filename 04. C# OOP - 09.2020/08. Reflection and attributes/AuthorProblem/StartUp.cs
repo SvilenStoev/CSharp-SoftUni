@@ -7,11 +7,19 @@ namespace AuthorProblem
     public class StartUp
     {
         [Author("Pesho")]
-        static void Main(string[] args)
+        public static void Main()
         {
             var tracker = new Tracker();
 
             tracker.PrintMethodsByAuthor();
+
+           
+        }
+
+        [Author("Svilen")]
+        public static void SomeMethod()
+        {
+            Console.WriteLine("something!");
         }
     }
 }
