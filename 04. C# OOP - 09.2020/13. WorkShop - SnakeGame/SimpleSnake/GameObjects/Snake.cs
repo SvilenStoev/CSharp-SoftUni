@@ -10,6 +10,7 @@ namespace SimpleSnake.GameObjects
     {
         private readonly Queue<Point> snakeQueue;
         private readonly List<Food> food;
+        private readonly List<Food> bombs;
         private readonly Wall wall;
         private const char snakeSymbol = '\u25CF';
         private int foodIndex;
@@ -22,12 +23,13 @@ namespace SimpleSnake.GameObjects
             this.wall = wall;
             this.snakeQueue = new Queue<Point>();
             this.food = new List<Food>();
+            this.bombs = new List<Food>();
             this.GetFoods();
-            this.foodIndex = RandomFoodNumber;
+            this.foodIndex = 0;
             this.CreateSnake();
         }
 
-        private int RandomFoodNumber => new Random().Next(0, this.food.Count);
+        private int RandomFoodNumber => new Random().Next(0, 100);
 
         public bool IsMoving(Point direction)
         {
@@ -57,8 +59,16 @@ namespace SimpleSnake.GameObjects
             snakeTail.Draw(' ');
 
             //TODO Is this correct?
+            this.bombs.ForEach(b =>
+            {
+                if (b.HasFoodPointCollision(snakeNewHead))
+                {
+                    this.Eat(direction, currSnakeHead, b);
+                    return;
+                }
+            });
 
-            if (this.food[foodIndex].IsFoodPoint(snakeNewHead))
+            if (this.food[this.foodIndex].HasFoodPointCollision(snakeNewHead))
             {
                 this.Eat(direction, currSnakeHead);
             }
@@ -71,9 +81,19 @@ namespace SimpleSnake.GameObjects
             return true;
         }
 
-        private void Eat(Point direction, Point currSnakeHead)
+        private void Eat(Point direction, Point currSnakeHead, Food bomb = null)
         {
-            int length = this.food[foodIndex].FoodPoints;
+            int length;
+
+            if (bomb == null)
+            {
+                length = this.food[foodIndex].FoodPoints;
+            }
+            else
+            {
+                length = bomb.FoodPoints;
+                this.bombs.Remove(bomb);
+            }
 
             if (length < 0)
             {
@@ -98,8 +118,40 @@ namespace SimpleSnake.GameObjects
             this.wall.AddPoints(this.snakeQueue);
             this.wall.PlayerStats();
 
-            this.foodIndex = this.RandomFoodNumber;
-            this.food[foodIndex].SetRandomPosition(this.snakeQueue);
+            int randomNumber = this.RandomFoodNumber;
+
+            if (randomNumber <= 45)
+            {
+                this.DrawFoodOnRandomPosition(0);
+            }
+            else if (randomNumber <= 75)
+            {
+                this.DrawFoodOnRandomPosition(1);
+            }
+            else
+            {
+                if (length >= 0)
+                {
+                    this.DrawBombOnRandomPosition();
+                }
+                this.DrawFoodOnRandomPosition(0);
+            }
+        }
+
+        private void DrawFoodOnRandomPosition(int foodIndex)
+        {
+            this.foodIndex = foodIndex;
+            this.food[this.foodIndex].SetRandomPosition(this.snakeQueue);
+            this.food[this.foodIndex].DrawFood();
+        }
+
+        private void DrawBombOnRandomPosition()
+        {
+            int nextBombIndex = this.bombs.Count;
+
+            this.bombs.Add(new FoodAsterisk(this.wall));
+            this.bombs[nextBombIndex].SetRandomPosition(this.snakeQueue);
+            this.bombs[nextBombIndex].DrawFood();
         }
 
         private void GetNextPoint(Point direction, Point snakeHead)
@@ -116,14 +168,14 @@ namespace SimpleSnake.GameObjects
                 this.snakeQueue.Last().Draw(snakeSymbol);
             }
 
-            this.food[foodIndex].SetRandomPosition(this.snakeQueue);
+            this.food[0].SetRandomPosition(this.snakeQueue);
+            this.food[0].DrawFood();
         }
 
         private void GetFoods()
         {
             this.food.Add(new FoodHash(this.wall));
             this.food.Add(new FoodDollar(this.wall));
-            this.food.Add(new FoodAsterisk(this.wall));
         }
     }
 }

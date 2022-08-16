@@ -1,12 +1,11 @@
 ﻿namespace SimpleSnake
 {
+    using System;
+    using System.Threading;
+
+    using Utilities;
     using SimpleSnake.Core;
     using SimpleSnake.GameObjects;
-    using SimpleSnake.GameObjects.Foods;
-    using System;
-    using System.Collections.Generic;
-    using System.Threading;
-    using Utilities;
 
     public class StartUp
     {
@@ -29,7 +28,7 @@
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine(ae.Message);
 
-                Thread.Sleep(2500);
+                //Thread.Sleep(2500);
                 Main();
             }
         }

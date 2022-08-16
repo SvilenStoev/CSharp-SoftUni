@@ -1,10 +1,8 @@
-﻿using SimpleSnake.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SimpleSnake.GameObjects
+﻿namespace SimpleSnake.GameObjects
 {
+    using System;
+    using System.Collections.Generic;
+
     public class Wall : Point
     {
         private const char wallSymbol = '\u25A0';
@@ -19,9 +17,12 @@ namespace SimpleSnake.GameObjects
             this.SetPlayerName();
             this.InitializeWallBorders();
             this.PlayerStats();
+
+            Console.SetCursorPosition(this.LeftX + 3, 0);
+            Console.WriteLine($"Player username: {this.PlayerName}");
         }
 
-        public string PlayerName 
+        public string PlayerName
         {
             get
             {
@@ -36,7 +37,7 @@ namespace SimpleSnake.GameObjects
                 }
 
                 this.playerName = value;
-            } 
+            }
         }
 
         public bool IsPointOfWall(Point snakeHead)
@@ -79,8 +80,6 @@ namespace SimpleSnake.GameObjects
 
         public void PlayerStats()
         {
-            Console.SetCursorPosition(this.LeftX + 3, 0);
-            Console.WriteLine($"Player username: {this.PlayerName}");
             Console.SetCursorPosition(this.LeftX + 3, 2);
             Console.WriteLine($" --points: {this.playerPoints}");
             Console.SetCursorPosition(this.LeftX + 3, 3);
@@ -112,11 +111,12 @@ namespace SimpleSnake.GameObjects
             Console.SetCursorPosition(8, 18);
             Console.Write("Press Enter to continue!");
 
-            ConsoleKeyInfo c = Console.ReadKey();
+            ConsoleKeyInfo c;
 
             do
             {
-                
+                Console.SetCursorPosition(10, 20);
+                c = Console.ReadKey();
             } while (c.Key != ConsoleKey.Enter);
         }
     }

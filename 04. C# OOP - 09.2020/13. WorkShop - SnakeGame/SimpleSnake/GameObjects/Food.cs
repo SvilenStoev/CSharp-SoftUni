@@ -38,7 +38,12 @@ namespace SimpleSnake.GameObjects
             }
         }
 
-        public bool IsFoodPoint(Point snake)
+        public void DrawFood()
+        {
+            this.Draw(foodSymbol);
+        }
+
+        public bool HasFoodPointCollision(Point snake)
         {
             return snake.TopY == this.TopY && snake.LeftX == this.LeftX;
         }
