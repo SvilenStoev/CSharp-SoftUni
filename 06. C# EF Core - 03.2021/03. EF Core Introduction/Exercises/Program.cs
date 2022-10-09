@@ -31,6 +31,8 @@ namespace Exercises
 
             List<string> selectMany = list.SelectMany(x => x).ToList();
 
+            selectMany.ForEach(x => Console.WriteLine(x));
+
         }
     }
 }
